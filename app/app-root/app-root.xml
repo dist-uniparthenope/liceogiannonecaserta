@@ -9,12 +9,13 @@ https://docs.nativescript.org/ui/professional-ui-components/SideDrawer/getting-s
     </nsDrawer:RadSideDrawer.drawerTransition>
 
     <nsDrawer:RadSideDrawer.drawerContent>
-        <GridLayout rows="auto, *" class="sidedrawer sidedrawer-left">
-            <StackLayout class="sidedrawer-header">
-                <Label class="sidedrawer-header-image fa" text="&#xf2bd;" />
+        <GridLayout rows="auto, *" class="sidedrawer sidedrawer-left side">
+            <StackLayout class="sidedrawer-header" backgroundColor="#21202e">
+                <Label class="sidedrawer-header-image fa" text="&#xf2bd;" horizontalAlignment="center"/>
+                <Label text="Benvenuto" color="white" horizontalAlignment="center"/>
             </StackLayout>
 
-            <ScrollView row="1">
+            <ScrollView row="1" backgroundColor="rgba(0,0,0,0.4)">
                 <StackLayout class="sidedrawer-content">
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Home' ? ' selected': '') }}"
                         route="home/home-page" title="Home" tap="onNavigationItemTap">

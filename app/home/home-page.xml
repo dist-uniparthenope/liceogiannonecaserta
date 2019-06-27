@@ -1,6 +1,8 @@
 <Page
     class="page"
     navigatingTo="onNavigatingTo"
+    xmlns:ns="nativescript-carousel"
+    xmlns:accordion="nativescript-accordion"
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
     <ActionBar class="action-bar">
@@ -22,22 +24,44 @@
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <StackLayout xmlns:accordion="nativescript-accordion" visibility="{{android}}">
-        <ScrollView height="100%">
-            <accordion:Accordion id="accordion" items="{{ items }}" allowMultiple="false" height="100%">
-                <accordion:Accordion.itemHeaderTemplate>
-                    <StackLayout horizontalAlignment="center" verticalAlignment="bottom" class="blue_background_report" width="100%">
-                        <Label text="{{title}}" horizontalAlignment="center" textWrap="true" margin="5 5 5 5"/>
-                        <Label text="{{date_text}}" fontSize="11" margin="5 5 5 5"/>
-                    </StackLayout>
-                </accordion:Accordion.itemHeaderTemplate>
+    <StackLayout>
+        <GridLayout>
+            <StackLayout verticalAlignment="top" height="60%">
+                <Image src="~/images/logo.png" marginBottom="15"/>
 
-                <accordion:Accordion.itemContentTemplate>
-                    <StackLayout>
-                        <HtmlView html="{{ desc }}" color="#009432"></HtmlView>
-                    </StackLayout>
-                </accordion:Accordion.itemContentTemplate>
-            </accordion:Accordion>
-        </ScrollView>
+                <GridLayout>
+                    <ns:Carousel id="myCarousel" items="{{ images }}" color="white" indicatorColorUnselected="#1b2b4c"
+                                 pageChanged="myChangeEvent" pageTapped="mySelectedEvent" ios:autoPagingInterval="10" android:indicatorAnimation="THIN_WORM"
+                                 indicatorColor="#395ca3" indicatorOffset="0,0" showIndicator="true">
+                        <ns:Carousel.itemTemplate>
+                            <ns:CarouselItem backgroundColor="#395ca3">
+                                <GridLayout >
+                                    <Image src="{{ image }}" stretch="aspectFill" />
+                                </GridLayout>
+                            </ns:CarouselItem>
+                        </ns:Carousel.itemTemplate>
+                    </ns:Carousel>
+                </GridLayout>
+            </StackLayout>
+
+            <StackLayout orientation="vertical" verticalAlignment="bottom">
+                <ScrollView height="40%">
+                    <accordion:Accordion id="accordion" items="{{ items }}" allowMultiple="false" height="100%" width="100%">
+                        <accordion:Accordion.itemHeaderTemplate>
+                            <StackLayout horizontalAlignment="center" verticalAlignment="bottom" color="white" backgroundColor="#395ca3">
+                                <Label text="{{title}}" textWrap="true" fontSize="18" margin="5 5 5 5" />
+                                <Label horizontalAlignment="center" text="{{date_text}}" fontSize="11" margin="5 5 5 5"/>
+                            </StackLayout>
+                        </accordion:Accordion.itemHeaderTemplate>
+
+                        <accordion:Accordion.itemContentTemplate>
+                            <StackLayout>
+                                <HtmlView html="{{ desc }}" color="#009432"></HtmlView>
+                            </StackLayout>
+                        </accordion:Accordion.itemContentTemplate>
+                    </accordion:Accordion>
+                </ScrollView>
+            </StackLayout>
+        </GridLayout>
     </StackLayout>
 </Page>

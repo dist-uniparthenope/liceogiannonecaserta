@@ -6,6 +6,15 @@ let xml2js = require('nativescript-xml2js');
 let fs = require("tns-core-modules/file-system");
 const httpModule = require("tns-core-modules/http");
 
+let web_image = ["http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2018/10/filmato-1.jpg",
+    "http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2017/09/0001-1.jpg",
+    "http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2017/09/000banniy.jpg",
+    "http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2017/09/banner3.jpg",
+    "http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2017/09/0002-2.jpg",
+    "http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2017/09/BANNER03-2.jpg",
+    "http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2017/09/0003.jpg",
+    "http://www.liceogiannonecaserta.gov.it/giannone/wp-content/uploads/2017/08/ban9-1.jpg"]
+
 function HomeViewModel() {
     SelectedPageService.getInstance().updateSelectedPage("Home");
 
@@ -15,6 +24,15 @@ function HomeViewModel() {
         items:items
     });
 
+    var images = new ObservableArray();
+
+    for(let i=0; i<web_image.length; i++){
+        images.push({
+            "image": web_image[i]
+        });
+    }
+
+    viewModel.set('images', images);
 
 
     let dest = fs.path.join(fs.knownFolders.currentApp().path, "/rss.xml");
@@ -26,19 +44,11 @@ function HomeViewModel() {
 
                 for(let i=0; i<result.rss.channel[0].item.length; i++)
                 {
-                    let myHtmlString = result.rss.channel[0].item[i].description.toString();
+                    let myHtmlString = result.rss.channel[0].item[i]["content:encoded"].toString();
                     const title = result.rss.channel[0].item[i].title.toString();
                     const date = result.rss.channel[0].item[i].pubDate.toString();
                     let data = extractData(date);
 
-                    let index = myHtmlString.search('img alt');
-                    if(index != -1){
-                        let temp = myHtmlString.slice(index);
-                        let index1 = temp.search('align-left');
-                        let string_temp = myHtmlString.slice(index-4, index+index1+88);
-                        myHtmlString = myHtmlString.replace(string_temp, " ");
-                    }
-                    console.log(title);
                     items.push({
                         title: title,
                         date:data,

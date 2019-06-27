@@ -12,5 +12,6 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;

@@ -5,9 +5,9 @@ const SelectedPageService = require("../shared/selected-page-service");
 function CalendarViewModel() {
     SelectedPageService.getInstance().updateSelectedPage("Calendar");
 
-    const viewModel = observableModule.fromObject({
-        /* Add your view model properties here */
-    });
+    const viewModel = observableModule.fromObject({});
+
+
 
     return viewModel;
 }

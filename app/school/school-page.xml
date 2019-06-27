@@ -22,10 +22,16 @@
         <Label class="action-bar-title" text="Istituto"></Label>
     </ActionBar>
 
-    <StackLayout>
-        <Label text="Ministero dell’Istruzione, dell’Università e della Ricerca"></Label>
-        <Label text="Liceo Classico “Pietro Giannone”"></Label>
-        <Label text="Indirizzi: Liceo Classico – Liceo Scientifico – Liceo Classico della Comunicazione"></Label>
-        <Label text="Corso Giannone, 96 – 81100 Caserta"></Label>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout orientation="vertical">
+            <Image src="~/images/icon.png" width="200" margin="10 0 10 0"/>
+
+            <StackLayout margin="0 10 0 10">
+                <Label textAlignment="center" textWrap="true" color="#21202e" text="Ministero dell’Istruzione, dell’Università e della Ricerca" marginTop="10"></Label>
+                <Label textAlignment="center" textWrap="true" color="#21202e" fontSize="18" style="font-weight:bold;" text="Liceo Classico “Pietro Giannone”" marginTop="10"></Label>
+                <Label textAlignment="center" textWrap="true" color="#21202e" text="Indirizzi: Liceo Classico – Liceo Scientifico – Liceo Classico della Comunicazione" marginTop="10"></Label>
+                <Label textAlignment="center" textWrap="true" color="#21202e" text="Corso Giannone, 96 – 81100 Caserta" marginTop="10"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </Page>
