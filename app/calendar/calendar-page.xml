@@ -27,12 +27,12 @@
             <rc:RadCalendar.dayViewStyle>
                 <rc:CalendarDayViewStyle showTitle="true" showDayNames="true" >
                     <rc:CalendarDayViewStyle.todayCellStyle>
-                        <rc:DayCellStyle cellBorderColor="#940400" cellTextColor="#940400" cellTextFontName="Montserrat-Bold" cellTextSize="14" />
+                        <rc:DayCellStyle cellBorderColor="#395ca3" cellTextColor="#395ca3" cellTextFontName="Montserrat-Bold" cellTextSize="14" />
                     </rc:CalendarDayViewStyle.todayCellStyle>
 
                     <rc:CalendarDayViewStyle.dayCellStyle>
                         <rc:DayCellStyle showEventsText="true" eventTextColor="White" eventFontName="Times New Roman" eventFontStyle="BoldItalic" eventTextSize="8"
-                                         cellAlignment="VerticalCenter" cellPaddingHorizontal="10" cellPaddingVertical="5" cellBackgroundColor="#5CC77A"
+                                         cellAlignment="VerticalCenter" cellPaddingHorizontal="10" cellPaddingVertical="5" cellBackgroundColor="#21202e"
                                          cellTextColor="#ffffff" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" ios:cellTextSize="12" android:cellTextSize="10"/>
                     </rc:CalendarDayViewStyle.dayCellStyle>
 
@@ -45,22 +45,22 @@
                     <rc:CalendarDayViewStyle.selectedDayCellStyle>
                         <rc:DayCellStyle eventTextColor="Blue" eventFontName="Times New Roman" eventFontStyle="Bold" eventTextSize="8"
                                          cellAlignment="VerticalCenter" cellPaddingHorizontal="10" cellPaddingVertical="5" cellBackgroundColor="White"
-                                         cellBorderWidth="2" cellBorderColor="White" cellTextColor="#009432" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="22" />
+                                         cellBorderWidth="2" cellBorderColor="White" cellTextColor="#395ca3" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="22" />
                     </rc:CalendarDayViewStyle.selectedDayCellStyle>
 
 
 
                     <rc:CalendarDayViewStyle.dayNameCellStyle>
-                        <rc:CellStyle  cellBackgroundColor="#ffffff" cellBorderWidth="1" cellBorderColor="#009432" cellTextColor="#009432" cellTextFontName="Montserrat-Regular" cellTextSize="10" />
+                        <rc:CellStyle  cellBackgroundColor="#ffffff" cellBorderWidth="1" cellBorderColor="#395ca3" cellTextColor="#395ca3" cellTextFontName="Montserrat-Regular" cellTextSize="10" />
                     </rc:CalendarDayViewStyle.dayNameCellStyle>
 
                     <rc:CalendarDayViewStyle.titleCellStyle>
-                        <rc:CellStyle cellTextColor="#009432" cellTextFontName="Montserrat-Regular" cellTextSize="18" />
+                        <rc:CellStyle cellTextColor="#395ca3" cellTextFontName="Montserrat-Regular" cellTextSize="18" />
                     </rc:CalendarDayViewStyle.titleCellStyle>
 
                     <rc:CalendarDayViewStyle.dayEventsViewStyle>
                         <rc:DayEventsViewStyle
-                                timeLabelFormat="HH:mm" timeLabelTextColor="#009432"
+                                timeLabelFormat="HH:mm" timeLabelTextColor="#395ca3"
                                 timeLabelTextSize="12"/>
                     </rc:CalendarDayViewStyle.dayEventsViewStyle>
 
