@@ -12,8 +12,6 @@ https://docs.nativescript.org/ui/professional-ui-components/SideDrawer/getting-s
         <GridLayout rows="auto, *" class="sidedrawer sidedrawer-left">
             <StackLayout class="sidedrawer-header">
                 <Label class="sidedrawer-header-image fa" text="&#xf2bd;" />
-                <Label class="sidedrawer-header-brand" text="User Name" />
-                <Label class="footnote" text="username@mail.com" />
             </StackLayout>
 
             <ScrollView row="1">
@@ -24,16 +22,16 @@ https://docs.nativescript.org/ui/professional-ui-components/SideDrawer/getting-s
                         <Label row="0" col="1" text="Home" class="p-r-10" />
                     </GridLayout>
 
-                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Istituto' ? ' selected': '') }}"
-                        route="istituto/istituto-page" title="Istituto" tap="onNavigationItemTap">
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'School' ? ' selected': '') }}"
+                        route="school/school-page" title="School" tap="onNavigationItemTap">
                         <Label row="0" col="0" text="&#xf1ea;" class="fa" />
                         <Label row="0" col="1" text="Istituto" class="p-r-10" />
                     </GridLayout>
 
-                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Search' ? ' selected': '') }}"
-                        route="search/search-page" title="Search" tap="onNavigationItemTap">
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Calendar' ? ' selected': '') }}"
+                        route="calendar/calendar-page" title="Calendar" tap="onNavigationItemTap">
                         <Label row="0" col="0" text="&#xf002;" class="fa" />
-                        <Label row="0" col="1" text="Search" class="p-r-10" />
+                        <Label row="0" col="1" text="Calendar" class="p-r-10" />
                     </GridLayout>
 
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Featured' ? ' selected': '') }}"
