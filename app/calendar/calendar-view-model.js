@@ -2,8 +2,8 @@ const observableModule = require("tns-core-modules/data/observable");
 
 const SelectedPageService = require("../shared/selected-page-service");
 
-function SearchViewModel() {
-    SelectedPageService.getInstance().updateSelectedPage("Search");
+function CalendarViewModel() {
+    SelectedPageService.getInstance().updateSelectedPage("Calendar");
 
     const viewModel = observableModule.fromObject({
         /* Add your view model properties here */
@@ -12,4 +12,4 @@ function SearchViewModel() {
     return viewModel;
 }
 
-module.exports = SearchViewModel;
+module.exports = CalendarViewModel;

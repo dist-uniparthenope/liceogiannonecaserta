@@ -1,10 +1,10 @@
 const app = require("tns-core-modules/application");
 
-const IstitutoViewModel = require("./istituto-view-model");
+const SchoolViewModel = require("./school-view-model");
 
 function onNavigatingTo(args) {
     const page = args.object;
-    page.bindingContext = new IstitutoViewModel();
+    page.bindingContext = new SchoolViewModel();
 }
 
 function onDrawerButtonTap(args) {

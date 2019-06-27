@@ -1,10 +1,10 @@
 const app = require("tns-core-modules/application");
 
-const SearchViewModel = require("./search-view-model");
+const CalendarViewModel = require("./calendar-view-model");
 
 function onNavigatingTo(args) {
     const page = args.object;
-    page.bindingContext = new SearchViewModel();
+    page.bindingContext = new CalendarViewModel();
 }
 
 function onDrawerButtonTap(args) {
